@@ -186,10 +186,9 @@
 
   var getFireballSpeed = function(left) {
     if (left) {
-      var fireballSpeed = 5;
-    }
-    else {
-      fireballSpeed = 2;
+      return 5;
+    } else {
+      return 2;
     }
     return fireballSpeed;
   };
@@ -199,18 +198,16 @@
   var wizardWidth = 70;
 
   var getWizardHeight = function(wizardWidth) {
-    var wizardHeight = 1.337 * wizardWidth;
-    return wizardHeight;
+    return 1.337 * wizardWidth;
   };
 
   var getWizardX = function(width) {
-    var wizardX = width / 2 - wizardWidth / 2; 
-    return wizardX;
+    return width / 2 - wizardWidth / 2; 
+
   };
 
   var getWizardY = function(height) {
-    var wizardY = height / 3; //"две трети игрового поля от земли".. не поняла, где это) 
-    return wizardY;
+    return height / 3 - getWizardHeight(wizardWidth);
   };
 </script>
 
